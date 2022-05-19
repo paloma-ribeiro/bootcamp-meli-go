@@ -17,5 +17,5 @@ var umidade int = 54
 var pressaoAtmosferica int = 690
 
 func imprimeDados() {
-	fmt.Println("Temperatura: %s, Umidade: %s, Pressão Atmosférica: %s", temperatura, umidade, pressaoAtmosferica)
+	fmt.Println("Temperatura: ", temperatura, "Umidade: ", umidade, "Pressão Atmosférica: ", pressaoAtmosferica)
 }

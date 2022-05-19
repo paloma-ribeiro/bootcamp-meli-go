@@ -12,5 +12,5 @@ func imprimeNomeIdade() {
 	nome := "Paloma Ribeiro"
 	idade := 20
 
-	fmt.Printf("Nome: %s, Idade: %s", nome, idade)
+	fmt.Println("Nome: ", nome, "Idade: ", idade)
 }
