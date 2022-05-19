@@ -1,4 +1,4 @@
-### Passo a passo da execuçao da atividade para fixação do conteúdo
+### Passo a passo da execuçao da atividade
 
 - 1- Executar no terminal:
 > go mod init github.com/paloma-ribeiro/bootcamp-meli-go
