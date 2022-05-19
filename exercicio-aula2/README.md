@@ -1,7 +1,7 @@
 ### Passo a passo da execuçao da atividade para fixação do conteúdo
 
 - 1- Executar no terminal:
-> go mod init github.com/paloma-ribeiro/bootcamp-meli-go/exercicio-aula2
+> go mod init github.com/paloma-ribeiro/bootcamp-meli-go
 
 ## Introdução
 
