@@ -34,6 +34,7 @@ Obs: Caso um dos números digitados seja negativo, a aplicação deve retornar u
 */
 
 func calcularMedia(notas ...int) (int, error) {
+
 	var soma int = 0
 	media := 0
 
