@@ -71,7 +71,15 @@ func verificaCliente(cliente Cliente) []bool {
 
 func verificaEmprestimo(estadoCliente []bool) {
 
-	for i 
+	if estadoCliente[0] && estadoCliente[1] && estadoCliente[2] == true {
+		if estadoCliente[3] == true {
+			fmt.Println("Cliente apto ao emprestimo sem cobrança de juros")
+		} else {
+			fmt.Println("Cliente apto ao emprestimo com cobrança de juros")
+		}
+	} else {
+		fmt.Println("Cliente inapto ao emprestimo")
+	}
 
 }
 
@@ -82,6 +90,13 @@ func main() {
 	// Exercício 2 - Empréstimo
 	cliente1 := Cliente{"Paloma Ribeiro", 25, true, 2, 5000000}
 	cliente2 := Cliente{"Joana da Silva", 18, true, 0.5, 50000}
-	fmt.Println(verificaCliente(cliente1))
-	fmt.Println(verificaCliente(cliente2))
+	cliente3 := Cliente{"Romulo Andrade", 23, true, 3, 50000}
+
+	resultadoCliente1 := verificaCliente(cliente1)
+	resultadoCliente2 := verificaCliente(cliente2)
+	resultadoCliente3 := verificaCliente(cliente3)
+
+	verificaEmprestimo(resultadoCliente1)
+	verificaEmprestimo(resultadoCliente2)
+	verificaEmprestimo(resultadoCliente3)
 }
