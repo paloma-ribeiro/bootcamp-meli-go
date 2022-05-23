@@ -11,7 +11,7 @@ const (
 )
 
 type loja struct {
-	produtos []string
+	produtos []produto
 }
 
 type produto struct {
@@ -26,7 +26,7 @@ type Produto interface {
 
 type Ecommerce interface {
 	Total() float64
-	Adicionar()
+	Adicionar(p produto)
 }
 
 func novoProduto(p produto) {
