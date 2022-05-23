@@ -83,6 +83,94 @@ func verificaEmprestimo(estadoCliente []bool) {
 
 }
 
+/*
+Exercício 3 - A que mês corresponde?
+
+Faça uma aplicação que contenha uma variável com o número do mês.
+1. Dependendo do número, imprima o mês correspondente em texto.
+2. Ocorre a você que isso pode ser resolvido de maneiras diferentes? Qual você
+escolheria e porquê?
+*/
+
+func imprimeMes(numeroMes int) {
+	var expressao bool = true
+
+	switch expressao {
+	case numeroMes == 1:
+		println("Janeiro")
+	case numeroMes == 2:
+		println("Fevereiro")
+	case numeroMes == 3:
+		println("Março")
+	case numeroMes == 4:
+		println("Abril")
+	case numeroMes == 5:
+		println("Maio")
+	case numeroMes == 6:
+		println("Junho")
+	case numeroMes == 7:
+		println("Julho")
+	case numeroMes == 8:
+		println("Agosto")
+	case numeroMes == 9:
+		println("Setembro")
+	case numeroMes == 10:
+		println("Outubro")
+	case numeroMes == 11:
+		println("Novembro")
+	case numeroMes == 12:
+		println("Dezembro")
+	default:
+		println("Número inválido!")
+	}
+}
+
+/*
+Exercício 4 - Quantos anos tem...
+
+Um funcionário de uma empresa deseja saber o nome e a idade de um de seus funcionários.
+De acordo com o mapa abaixo, ajude a imprimir a idade de Benjamin.
+
+var employees = map[string]int{"Benjamin": 20, "Manuel": 26, "Brenda": 19, "Dario": 44, "Pedro": 30}
+
+Por outro lado, você também precisa:
+- Saiba quantos de seus funcionários têm mais de 21 anos.
+- Adicione um novo funcionário à lista, chamado Federico, que tem 25 anos.
+- Excluir Pedro do mapa.
+*/
+
+var employees = map[string]int{"Benjamin": 20, "Manuel": 26, "Brenda": 19, "Dario": 44, "Pedro": 30}
+
+func imprimeFuncionario(nome string) {
+
+	for chave, valor := range employees {
+		if chave == nome {
+			fmt.Println("Nome:", chave, "Idade:", valor)
+		}
+	}
+}
+
+func verificaIdadeFuncionarios(idade int) {
+	count := 0
+
+	for _, valor := range employees {
+		if valor > idade {
+			count++
+		}
+	}
+	fmt.Println(count, "funcionários possuem mais de", idade, "anos")
+}
+
+func addFuncionario(nome string, idade int) {
+	employees[nome] = idade
+	fmt.Println(employees)
+}
+
+func excluiFuncionario(nome string) {
+	delete(employees, nome)
+	fmt.Println(employees)
+}
+
 func main() {
 	// Exercício 1 - Letras de uma palavra
 	imprimeLetra("Bootcamp Meli")
@@ -99,4 +187,15 @@ func main() {
 	verificaEmprestimo(resultadoCliente1)
 	verificaEmprestimo(resultadoCliente2)
 	verificaEmprestimo(resultadoCliente3)
+
+	// Exercício 3 - A que mês corresponde?
+	imprimeMes(7)
+	imprimeMes(12)
+	imprimeMes(14)
+
+	// Exercício 4 - Quantos anos tem...
+	imprimeFuncionario("Benjamin")
+	verificaIdadeFuncionarios(21)
+	addFuncionario("Julio", 26)
+	excluiFuncionario("Pedro")
 }
