@@ -60,6 +60,10 @@
   
     > go run [nome_do_arquivo]
 
-- 1- Para iniciar uma aplicação. Executar no terminal:
+- Para iniciar uma aplicação. Executar no terminal:
   
     > go mod init github.com/paloma-ribeiro/bootcamp-meli-go
+
+### Instalação do Testify
+
+> go get github.com/stretchr/testify
