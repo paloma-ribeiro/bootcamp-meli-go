@@ -71,7 +71,9 @@
 ### Instalação do Swagger em Go
 
 > go get -u github.com/swaggo/swag/cmd/swag
+
 > go get -u github.com/swaggo/files
+
 > go get -u github.com/swaggo/gin-swagger
 
 #### Gerar documentação com swagger
