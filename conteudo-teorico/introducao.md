@@ -67,3 +67,13 @@
 ### Instalação do Testify
 
 > go get github.com/stretchr/testify
+
+### Instalação do Swagger em Go
+
+> go get -u github.com/swaggo/swag/cmd/swag
+> go get -u github.com/swaggo/files
+> go get -u github.com/swaggo/gin-swagger
+
+#### Gerar documentação com swagger
+
+> swag init -g cmd/server/main.go
